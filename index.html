@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<title>Real Token Mining</title>
+<style>
+body{background:#101827;color:white;font-family:Arial;text-align:center;padding:20px}
+.card{background:#1e293b;padding:20px;border-radius:15px;margin:15px 0}
+button{background:#16a34a;color:white;border:0;padding:14px;border-radius:10px;width:100%;margin:8px 0;font-size:16px}
+</style>
+</head>
+<body>
+<h2>⛏️ REAL TOKEN MINING</h2>
+<div class="card">
+<h3>Your Balance</h3>
+<h1 id="balance">0 RTC</h1>
+</div>
+<div class="card">
+<h3 id="status">Mining is stopped</h3>
+<button onclick="mine()">START MINING</button>
+</div>
+<div class="card">
+<button onclick="alert('Referral coming soon')">👥 Referral</button>
+<button onclick="alert('Watch Ads coming soon')">📺 Watch Ads</button>
+<button onclick="alert('Withdraw coming soon')">💳 Withdraw</button>
+</div>
+<script>
+let balance=0;
+function mine(){
+document.getElementById('status').innerText='Mining Started!';
+}
+const tg=window.Telegram.WebApp;
+tg.ready();
+tg.expand();
+</script>
+</body>
+</html>
